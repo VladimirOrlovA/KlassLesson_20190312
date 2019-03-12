@@ -4,9 +4,9 @@
 
 using namespace std;
 
-// Хедер fstream предоставляет функционал для считывания данных из файла и для записи в файл. 
-// В целом он очень похож на хедер iostream, который работает с консолью, поскольку консоль это тоже файл. 
-// Поэтому все основные операции такие же, за мелкими отличиями, как в предыдущей теме по iostream.
+ /*Хедер fstream предоставляет функционал для считывания данных из файла и для записи в файл. 
+ В целом он очень похож на хедер iostream, который работает с консолью, поскольку консоль это тоже файл. 
+ Поэтому все основные операции такие же, за мелкими отличиями, как в предыдущей теме по iostream.*/
 
 
 //int main()
@@ -122,13 +122,13 @@ using namespace std;
 
 /////////////////////////////////////
 
-int main()
+/*int main()
 {
 	SetConsoleCP(1251);						// установка кодовой страницы win-cp 1251 в поток ввода
 	SetConsoleOutputCP(1251);				// установка кодовой страницы win-cp 1251 в поток вывода
 
-	ifstream in_file;						// output file stream
-	ofstream out_file;
+	ifstream in_file;						// in file stream - считываем из файла
+	ofstream out_file;						// output file stream - пишем в файл
 
 	in_file.open("Source.cpp");
 	
@@ -143,7 +143,8 @@ int main()
 
 	cout << "Выводим кол-во всех символов -> " << count << endl;
 
-	in_file.seekg(0);
+	in_file.close();
+	in_file.open("Source.cpp");
 	count = 0;
 
 	while (in_file >> var)
@@ -155,4 +156,108 @@ int main()
 
 	system("pause");
 	return 0;
+}*/
+
+
+///////////////////// считаем кол-во слов  //////////////////////////
+
+/*
+int main()
+{
+	SetConsoleCP(1251);						// установка кодовой страницы win-cp 1251 в поток ввода
+	SetConsoleOutputCP(1251);				// установка кодовой страницы win-cp 1251 в поток вывода
+
+	ifstream in_file;						// in file stream - считываем из файла
+	ofstream out_file;						// output file stream - пишем в файл
+
+	char str[50];
+
+	in_file.open("Source.cpp");
+
+
+	char var;
+	int count = 0;
+
+	while (in_file >> str)
+	{
+		count++;
+	}
+
+	cout << "Выводим кол-во всех слов -> " << count << endl;
+
+	in_file.close();
+	in_file.open("Source.cpp");
+	count = 0;
+
+	
+
+	system("pause");
+	return 0;
+}*/
+
+
+///////////////////// считаем кол-во строк  //////////////////////////
+
+/*
+int main()
+{
+	SetConsoleCP(1251);						// установка кодовой страницы win-cp 1251 в поток ввода
+	SetConsoleOutputCP(1251);				// установка кодовой страницы win-cp 1251 в поток вывода
+
+	ifstream in_file;						// in file stream - считываем из файла
+	//ofstream out_file;						// output file stream - пишем в файл
+
+	char str[1000];
+
+	in_file.open("Source.cpp");
+
+
+	char var;
+	int count = 0;
+
+	while (in_file.getline(str,1000))
+	{
+		cout << str << endl;
+		count++;
+	}
+
+	cout << "Выводим кол-во строк -> " << count << endl;
+
+	
+
+
+	system("pause");
+	return 0;
 }
+*/
+
+
+/////////////// массив строк //////////////
+
+/*
+int main()
+{
+
+	char ss[20][30];					//  [20]- кол-во строк   [30] - кол-во символов в строке;
+
+	for (int i = 0; i < 5; i++)
+	{
+		cin.getline(ss[i], 30);			// считываем строки
+	}
+
+	cout << endl;
+
+	for (int i = 0; i < 5; i++)
+	{
+		cout<<ss[i]<<endl;				// выводим строки
+	}
+
+	cout << endl;
+
+	system("pause");
+}
+*/
+
+
+//////////////////// упражнения из файла C_lab5_pro21_files_zp  ////////////////////
+
