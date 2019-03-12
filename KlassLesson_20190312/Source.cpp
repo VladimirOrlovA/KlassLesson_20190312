@@ -234,11 +234,13 @@ int main()
 
 /////////////// массив строк //////////////
 
-/*
+
 int main()
 {
 
 	char ss[20][30];					//  [20]- кол-во строк   [30] - кол-во символов в строке;
+
+	ofstream out_file("out.txt");
 
 	for (int i = 0; i < 5; i++)
 	{
@@ -250,13 +252,16 @@ int main()
 	for (int i = 0; i < 5; i++)
 	{
 		cout<<ss[i]<<endl;				// выводим строки
+		
+		out_file << ss[i] << endl;
+
 	}
 
 	cout << endl;
 
 	system("pause");
 }
-*/
+
 
 
 //////////////////// упражнения из файла C_lab5_pro21_files_zp  ////////////////////
