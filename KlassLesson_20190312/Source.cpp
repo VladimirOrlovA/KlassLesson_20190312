@@ -266,3 +266,33 @@ int main()
 
 //////////////////// упражнения из файла C_lab5_pro21_files_zp  ////////////////////
 
+// 7. Дан текстовый файл.Удалить из него последнюю строку.Результат записать в другой файл.
+
+int main()
+{
+	SetConsoleCP(1251);						// установка кодовой страницы win-cp 1251 в поток ввода
+	SetConsoleOutputCP(1251);				// установка кодовой страницы win-cp 1251 в поток вывода
+
+	ifstream in_file;						// output file stream
+	ofstream out_file;
+
+	in_file.open("source.cpp");
+	out_file.open("out.txt");
+
+	char var;
+	
+	while (in_file.getline(str, 1000))
+	{
+		cout << str << endl;
+		count++;
+	}
+
+	while (in_file.get(var))
+	{
+		out_file << var;
+	}
+
+
+	system("pause");
+	return 0;
+}
