@@ -20,7 +20,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="out.txt">
+    <Text Include="New.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Out.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
